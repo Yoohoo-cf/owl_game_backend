@@ -18,7 +18,8 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 config.conn = mysql.connector.connect(
          host=os.environ.get('HOST'),
-         port=3306,
+        #  port=3306,
+         port=26962
          database=os.environ.get('DB_NAME'),
          user=os.environ.get('DB_USER'),
          password=os.environ.get('DB_PASS'),
