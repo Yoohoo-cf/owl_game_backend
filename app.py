@@ -16,6 +16,8 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
+MYSQL_URL = f"mysql -hviaduct.proxy.rlwy.net -uroot -p{os.environ.get('DB_PASS')} --port 26962 --protocol=TCP railway"
+
 config.conn = mysql.connector.connect(
          host=os.environ.get('HOST'),
          port=os.environ.get('PORT'),
