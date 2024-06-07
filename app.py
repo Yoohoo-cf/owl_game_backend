@@ -16,16 +16,16 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-MYSQL_URL = f"mysql -hviaduct.proxy.rlwy.net -uroot -p{os.environ.get('DB_PASS')} --port 26962 --protocol=TCP railway"
-
 config.conn = mysql.connector.connect(
          host=os.environ.get('HOST'),
          port=os.environ.get('PORT'),
          database=os.environ.get('DB_NAME'),
          user=os.environ.get('DB_USER'),
          password=os.environ.get('DB_PASS'),
-         autocommit=True
+         autocommit=True,
+         ssl_disabled=True
          )
+
 
 def fly(id, dest, consumption=0, player=None):
     if id == 0:
@@ -39,6 +39,7 @@ def fly(id, dest, consumption=0, player=None):
         game.location.append(m)
     json_data = json.dumps(game, default=lambda o: o.__dict__, indent=4)
     return json_data
+
 
 # http://127.0.0.1:7000/flyto?game=VAFyWkaMC4H1jWxR44Tl&dest=ESCF&consumption=246
 @app.route('/flyto')
