@@ -16,6 +16,7 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
+
 config.conn = mysql.connector.connect(
          host=os.environ.get('HOST'),
          port=os.environ.get('PORT'),
@@ -25,7 +26,6 @@ config.conn = mysql.connector.connect(
          autocommit=True,
          ssl_disabled=True
          )
-
 
 def fly(id, dest, consumption=0, player=None):
     if id == 0:
@@ -62,6 +62,9 @@ def newgame():
     return json_data
 
 if __name__ == '__main__':
-    app.run(use_reloader=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    # app.run(use_reloader=True, host='127.0.0.1', port=7000)
+    app.run(use_reloader=False, host='0.0.0.0', port=int(os.environ.get('PORT', 7000)))
+
+
 
 
