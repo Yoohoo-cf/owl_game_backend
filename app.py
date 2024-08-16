@@ -19,12 +19,11 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 config.conn = mysql.connector.connect(
          host=os.environ.get('HOST'),
-         port=os.environ.get('PORT'),
+         port=int(os.environ.get('PORT')),
          database=os.environ.get('DB_NAME'),
          user=os.environ.get('DB_USER'),
          password=os.environ.get('DB_PASS'),
-         autocommit=True,
-         ssl_disabled=True
+         autocommit=True
          )
 
 def fly(id, dest, consumption=0, player=None):
@@ -62,8 +61,7 @@ def newgame():
     return json_data
 
 if __name__ == '__main__':
-    # app.run(use_reloader=True, host='127.0.0.1', port=7000)
-    app.run(use_reloader=False, host='0.0.0.0', port=int(os.environ.get('PORT', 7000)))
+    app.run(use_reloader=True, host='127.0.0.1', port=7000)
 
 
 
