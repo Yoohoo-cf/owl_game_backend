@@ -23,8 +23,7 @@ config.conn = mysql.connector.connect(
          database=os.environ.get('DB_NAME'),
          user=os.environ.get('DB_USER'),
          password=os.environ.get('DB_PASS'),
-         autocommit=True,
-         ssl_disabled=True
+         autocommit=True
          )
 
 def fly(id, dest, consumption=0, player=None):
