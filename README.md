@@ -31,11 +31,11 @@ Fly to a New Location: Move to a new location within the game, consuming resourc
 
 - The .env file should be located in the root directory of the project and include the following environment variables:
 
-HOST=<your-database-host><br>
-PORT=<your-database-port><br>
-DB_NAME=<your-database-name><br>
-DB_USER=<your-database-user><br>
-DB_PASS=<your-database-password><br>
+  HOST=<your-database-host><br>
+  PORT=<your-database-port><br>
+  DB_NAME=<your-database-name><br>
+  DB_USER=<your-database-user><br>
+  DB_PASS=<your-database-password><br>
 
 **Database Configuration**
 
