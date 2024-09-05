@@ -4,15 +4,15 @@ This is a backend service for a magic_collection_game application, implemented u
 
 ## Features
 
-> Start a New Game: Create a new game with a player and initial location.<br>
-> Fly to a New Location: Move to a new location within the game, consuming resources and updating the game state.
+Start a New Game: Create a new game with a player and initial location.<br>
+Fly to a New Location: Move to a new location within the game, consuming resources and updating the game state.
 
 ## Installation
 
 > Clone the Repository
 
-> `git clone https://github.com/Yoohoo-cf/owl_game_backend.git`
-> `cd owl_game_backend`
+    `git clone https://github.com/Yoohoo-cf/owl_game_backend.git`
+    `cd owl_game_backend`
 
 ## Install Dependencies
 
@@ -27,19 +27,19 @@ Ensure you have the following packages in your requirements.txt:
 
 ## Configuration
 
-    **Create a .env File**
+- Create a .env File
 
-    The .env file should be located in the root directory of the project and include the following environment variables:
+  The .env file should be located in the root directory of the project and include the following environment variables:
 
-    HOST=<your-database-host>
-    PORT=<your-database-port>
-    DB_NAME=<your-database-name>
-    DB_USER=<your-database-user>
-    DB_PASS=<your-database-password>
+  HOST=<your-database-host>
+  PORT=<your-database-port>
+  DB_NAME=<your-database-name>
+  DB_USER=<your-database-user>
+  DB_PASS=<your-database-password>
 
-    **Database Configuration**
+- Database Configuration
 
-    Ensure that your MySQL database is accessible from the environment where the Flask application is running and that it has the correct credentials and settings.
+  Ensure that your MySQL database is accessible from the environment where the Flask application is running and that it has the correct credentials and settings.
 
 ## Endpoints
 
