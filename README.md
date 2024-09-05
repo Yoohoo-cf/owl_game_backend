@@ -18,28 +18,28 @@ Fly to a New Location: Move to a new location within the game, consuming resourc
 
 `pip install -r requirements.txt`
 
-Ensure you have the following packages in your requirements.txt:
+> Ensure you have the following packages in your requirements.txt:
 
-> Flask
-> Flask-Cors
-> mysql-connector-python
-> python-dotenv
+    * Flask
+    * Flask-Cors
+    * mysql-connector-python
+    * python-dotenv
 
 ## Configuration
 
-- Create a .env File
+**Create a .env File**
 
-  The .env file should be located in the root directory of the project and include the following environment variables:
+- The .env file should be located in the root directory of the project and include the following environment variables:
 
-  HOST=<your-database-host>
-  PORT=<your-database-port>
-  DB_NAME=<your-database-name>
-  DB_USER=<your-database-user>
-  DB_PASS=<your-database-password>
+HOST=<your-database-host><br>
+PORT=<your-database-port><br>
+DB_NAME=<your-database-name><br>
+DB_USER=<your-database-user><br>
+DB_PASS=<your-database-password><br>
 
-- Database Configuration
+**Database Configuration**
 
-  Ensure that your MySQL database is accessible from the environment where the Flask application is running and that it has the correct credentials and settings.
+- Ensure that your MySQL database is accessible from the environment where the Flask application is running and that it has the correct credentials and settings.
 
 ## Endpoints
 
