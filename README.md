@@ -16,7 +16,7 @@ Fly to a New Location: Move to a new location within the game, consuming resourc
 
 ## Install Dependencies
 
-`pip install -r requirements.txt`
+    `pip install -r requirements.txt`
 
 > Ensure you have the following packages in your requirements.txt:
 
